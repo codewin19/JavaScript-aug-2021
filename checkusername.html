@@ -60,15 +60,16 @@
         username.addEventListener('blur',function(){
             var username_error = document.getElementById('username_error');
             // work need to be done
-            if(username.value == "")
+            var te = /^[a-z0-9_-]{3,15}$/;
+            if(!te.test(username.value))
             {
                 // select where you want to show error
                 username_error.innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i> Please Enter username!";
-                username.style.border = "2px solid red";
+                this.style.border = "2px solid red";
             }else{
                 // select where you want to show error
                 username_error.innerText = "";
-                username.style.border = "2px solid black";
+                this.style.border = "2px solid black";
             }
 
         })
