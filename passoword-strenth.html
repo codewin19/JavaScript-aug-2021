@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,118 +102,47 @@
                 number.innerHTML ="<i class=\"far fa-times-circle\"></i>"+number.innerText;
                // console.log("number-false");
             }
-        })
 
-    </script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passsword Strength Meter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .form-container{
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        hr{
-            margin: 1em 0;
-        }
-
-        input{
-            padding: 0.5em;
-            border: 2px solid #333;
-            border-radius: 4px;
-        }
-
-        .form-container ul{
-            list-style: none;
-        }
-
-        .form-container ul li{
-            color:red;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <label for="Password">Password</label>
-        <input type="password" id="password" placeholder="Password">
-        <hr>
-        <ul>
-            <li id="eight_char"><i class="far fa-times-circle"></i> At least Eight Characters</li>
-            <li id="lowercase"><i class="far fa-times-circle"></i> lowercase</li>
-            <li id="uppercase"><i class="far fa-times-circle"></i> Uppercase</li>
-            <li id="symbol"><i class="far fa-times-circle"></i> Symbols ( ?#@.. )</li>
-            <li id="number"><i class="far fa-times-circle"></i> Number</li>
-        </ul>
-    </div>
-
-    <script>
-        function hasEightChar(value)
-        {
-            // if(value.length>=8)
-            //     true;
-            // return false;
-            return value.length>=8?true:false;
-        }
-
-        // select element
-        var password = document.getElementById("password");
-
-        // add event to element
-        password.addEventListener('keyup',function(){
-            if(hasEightChar(this.value))
+            const upper = /[A-Z]/;
+            if(upper.test(this.value))
             {
-                var eight_char = document.getElementById("eight_char");
-                eight_char.style.color = "green";
-                eight_char.innerHTML = "<i class=\"far fa-check-circle\"></i>"+eight_char.innerText;
+                var uppercase = document.getElementById("uppercase");
+                uppercase.style.color = "green";
+                uppercase.innerHTML = "<i class=\"far fa-check-circle\"></i>"+uppercase.innerText;
             }else{
-                var eight_char = document.getElementById("eight_char");
-                eight_char.style.color = "red";
-                eight_char.innerHTML ="<i class=\"far fa-times-circle\"></i>"+eight_char.innerText;
-            }
-
-            const te = /\d/;
-            if(te.test(this.value))
-            {
-                var number = document.getElementById("number");
-                number.style.color = "green";
-                number.innerHTML = "<i class=\"far fa-check-circle\"></i>"+number.innerText;
-               // console.log("number-true");
-
-            }else{
-                var number = document.getElementById("number");
-                number.style.color = "red";
-                number.innerHTML ="<i class=\"far fa-times-circle\"></i>"+number.innerText;
+                var uppercase = document.getElementById("uppercase");
+                uppercase.style.color = "red";
+                uppercase.innerHTML ="<i class=\"far fa-times-circle\"></i>"+uppercase.innerText;
                // console.log("number-false");
             }
+
+            const lower = /[a-z]/;
+            const lowercase = document.getElementById("lowercase");
+            if(lower.test(this.value))
+            {
+                lowercase.style.color = "green";
+                lowercase.innerHTML = "<i class=\"far fa-check-circle\"></i>"+lowercase.innerText;
+            }else{
+                lowercase.style.color = "red";
+                lowercase.innerHTML ="<i class=\"far fa-times-circle\"></i>"+lowercase.innerText;
+               // console.log("number-false");
+            }
+
+
+            const symbol = /[@#$%&*\.]/
+            const s = document.getElementById("symbol");
+            if(symbol.test(this.value))
+            {
+                s.style.color = "green";
+                s.innerHTML = "<i class=\"far fa-check-circle\"></i>"+s.innerText;
+            }else{
+                s.style.color = "red";
+                s.innerHTML ="<i class=\"far fa-times-circle\"></i>"+s.innerText;
+            }
+
+
         })
 
     </script>
 </body>
->>>>>>> 0f03b3ab81dafee828f54cd4b2d87a4547f48922
 </html>
