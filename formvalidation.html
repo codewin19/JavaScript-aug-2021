@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            gap:0.3em;
+            background-color: #fff5db;
+            padding: 2em;
+            border: 2px solid #888;
+            border-radius: 0.5em;
+        }
+
+        input,label{
+            font-size: 1.2em;
+        }
+
+        input{
+            padding: 0.5em;
+            border: 2px solid #666;
+            border-radius: 0.5em;
+            outline: none;
+        }
+
+        button{
+            margin-top: 1.5em;
+            background-color: #810075;
+            border:none;
+            outline: none;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 0.5em;
+        }
+
+        h1{
+             border-bottom: 2px solid #e1addc;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="form-container">
+        <h1>Login Form</h1>
+        <br>
+        <label for="username">Username : </label>
+        <input type="text" id="username" placeholder="username">
+        <label for="password">Password : </label>
+        <input type="password" id="password" placeholder="password">
+
+        <button id="validate">Submit</button>
+    </div>
+
+    <script>
+        const button = document.getElementById("validate");
+
+        button.addEventListener("click",function(){
+            // code to chech username
+            const username = document.getElementById('username');
+            if(username.value=="")
+            {
+                username.style.border = "2px solid rgba(255,0,0,0.8)";
+                username.style.backgroundColor = "rgba(255,0,0,0.3)";
+                username.focus();
+            }else{
+                username.style.border = "2px solid #666";
+                username.style.backgroundColor = "#fff";
+            }
+
+
+            // code to check password
+            const password = document.getElementById("password");
+            if(password.value=="")
+            {
+                password.style.border = "2px solid rgba(255,0,0,0.8)";
+                password.style.backgroundColor = "rgba(255,0,0,0.3)";
+                password.focus();
+
+            }else{
+                password.style.border = "2px solid #666";
+                password.style.backgroundColor = "#fff";
+            }
+        });
+    </script>
+</body>
+</html>
