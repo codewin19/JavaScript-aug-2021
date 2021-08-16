@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #box{
+            padding: 2em;
+            background-color: #dd7c1b;
+        }
+
+        #button{
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 0.5em 1em;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="button">
+            Click me
+        </button>
+    </div>
+
+    <script>
+        // select the elements
+        const div = document.querySelector("#box");
+        const button = document.getElementById("button");
+
+        const body = document.getElementsByTagName('body')[0];
+
+        body.addEventListener('click',function(){
+            alert("You have clicked on body");
+        });
+
+        div.addEventListener('click',function(){
+            alert("You have clicked div");
+        });
+
+        button.addEventListener('click',function(){
+            alert("You have clicked on button");
+        });
+    </script>
+</body>
+</html>
