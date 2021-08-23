@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
 
         *{
@@ -60,6 +61,17 @@
         h1{
              border-bottom: 2px solid #e1addc;
         }
+
+        .error{
+            color:red;
+            padding-left: 0.5em;
+            font-size: 0.8em;
+        }
+
+        div div{
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 
 </head>
@@ -67,10 +79,15 @@
     <div class="form-container">
         <h1>Login Form</h1>
         <br>
+        <div>
         <label for="username">Username : </label>
         <input type="text" id="username" placeholder="username">
+        </div>
+        <!-- <span class="error"><i class="fas fa-exclamation-triangle"></i> Please fill username</span> -->
+        <div>
         <label for="password">Password : </label>
         <input type="password" id="password" placeholder="password">
+        </div>
 
         <button id="validate">Submit</button>
     </div>
@@ -85,6 +102,10 @@
             {
                 username.style.border = "2px solid rgba(255,0,0,0.8)";
                 username.style.backgroundColor = "rgba(255,0,0,0.3)";
+                var error = document.createElement("span");
+                error.setAttribute('class','error');
+                error.innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i>Please enter username!";
+                username.parentElement.append(error);
                 username.focus();
             }else{
                 username.style.border = "2px solid #666";
