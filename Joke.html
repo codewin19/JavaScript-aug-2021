@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="joke">
+
+        </h1>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $.get( "https://api.icndb.com/jokes/random", function(data) {
+                //alert(data['value']['joke']);
+                document.getElementById('joke').innerText = data['value']['joke'];
+            })
+
+            
+        });
+    </script>
+</body>
+</html>
