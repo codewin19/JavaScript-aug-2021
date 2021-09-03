@@ -15,8 +15,9 @@
             // TODO: get Data from input
             const username = document.getElementById('username').value;
 
-            document.cookie = "username="+username;
-            
+            const data = JSON.stringify({'username':username,'gender':'Male'});
+            document.cookie = 'data='+data;
+            console.log(data);
         });
 
     </script>
