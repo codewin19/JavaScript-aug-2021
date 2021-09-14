@@ -30,16 +30,23 @@
 
         </h1>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
     <script>
-        $( document ).ready(function() {
-            $.get( "https://api.icndb.com/jokes/random", function(data) {
-                //alert(data['value']['joke']);
-                document.getElementById('joke').innerText = data['value']['joke'];
-            })
+        // $( document ).ready(function() {
+        //     $.get( "https://api.icndb.com/jokes/random", function(data) {
+        //         //alert(data['value']['joke']);
+        //         document.getElementById('joke').innerText = data['value']['joke'];
+        //     })
 
             
-        });
+        // });
+
+
+        fetch("https://api.icndb.com/jokes/random")
+        .then((response)=>{
+            console.log(response);
+            response.json().then((data)=>console.log(data['value']['joke']));
+        }).catch((error)=>console.log(error));
     </script>
 </body>
 </html>

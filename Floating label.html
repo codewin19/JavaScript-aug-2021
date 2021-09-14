@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-element{
+            display: flex;
+            flex-flow: column-reverse;
+            margin-bottom: 1em;
+        }
+
+        label,input{
+            transition: all 0.5s;
+        }
+
+        input{
+            font-size: 1.5em;
+            border: 0;
+            border-bottom: 2px solid #ccc;
+            cursor: text;
+            /* z-index: 9999; */
+        }
+
+        input:focus{
+            outline: none;
+            border-bottom: 2px solid #666;
+        }
+
+        label{
+            text-transform: uppercase;
+            font-weight: 600;
+            /* z-index: -9999; */
+            
+        }
+
+        input:placeholder-shown+label{
+            cursor:text;
+            max-width: 66.66%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform-origin: left bottom;
+            transform: translate(0,2rem) scale(1); 
+        }
+
+        ::-webkit-input-placeholder
+        {
+            opacity: 0;
+            transition: inherit;
+
+        }
+
+        input:not(:placeholder-shown)+label,
+        input:focus+label
+        {
+            transform: translate(0,0) scale(1);
+            cursor: pointer;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="form-element">
+                <input type="text" placeholder="username or email">
+                <label for="">Username or Email : </label>
+            </div>
+            <div class="form-element">
+                <input type="password" placeholder="Password">
+                <label for="">Password</label>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <p id="button">click me</p>
+
+    <script>
+        document.getElementsByTagName('button')[0].addEventListener('click',()=>{
+            // code
+            this.preventDefualt;
+            alert("You want to save the data!");
+        });
+
+        document.getElementById("button").addEventListener('click',()=>alert("hi"));
+    </script>
+</body>
+</html>

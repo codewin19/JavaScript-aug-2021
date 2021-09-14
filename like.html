@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes & Dislikes</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+        }
+
+        .button-container i, #counter{
+            font-size: 3em;
+        }
+
+        .fa-gratipay{
+            color:green;
+        }
+
+        .fa-heart-broken{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="https://images.indianexpress.com/2021/07/Windows-11-2.jpg" alt="" style="width: 300px;height:200px;">
+        <div class="button-container">
+            <i class="fab fa-gratipay" id="like"></i>
+            <p id="counter"> 0 </p>
+            <i class="fas fa-heart-broken" id="dislike"></i>
+
+        </div>
+    </div>
+
+   <script>
+       if(!window.localStorage.getItem('counter'))
+       {
+           var x = 0;
+           window.localStorage.setItem('counter',x);
+       }
+
+       
+
+       function load(){
+           document.getElementById('counter').innerText = window.localStorage.getItem('counter');
+       }
+
+       load();
+
+       document.getElementById('like').addEventListener('click',function(){
+            let x =  parseInt(window.localStorage.getItem('counter'));
+            x++;
+            window.localStorage.setItem('counter',x);
+            load();
+       });
+       document.getElementById('dislike').addEventListener('click',function(){
+            let x =  parseInt(window.localStorage.getItem('counter'));
+            x--;
+            window.localStorage.setItem('counter',x);
+            load();
+       });
+
+       
+   </script>
+</body>
+</html>
