@@ -1,0 +1,30 @@
+p,h1{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    color:red;
+    text-align: justify;
+    padding: 12px;
+}
+
+p:nth-child(2n-1)
+{
+    background-color: rgb(243, 234, 234);
+}
+h1{
+    text-align: center;
+  
+}
+
+h1 span{
+    border-bottom: 2px solid #000;
+}
+
+#para-3{
+    color:green;
+}
+
+.class-blue{
+  color:blueviolet;  
+}
