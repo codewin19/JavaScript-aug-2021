@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formating</title>
+    <style>
+        #para-one{
+            word-spacing: 32px;
+            letter-spacing: 16px;
+        }
+
+        #para-two{
+            text-transform: uppercase;
+            text-indent: 48px;
+            
+        }
+
+        #para-two::first-letter{
+            font-size: 48px;
+            font-weight: bolder;
+
+        }
+
+
+        #para-two::first-line{
+            color:aqua;
+        }
+
+        
+
+        #para-three{
+            text-transform: capitalize;
+            text-decoration: underline;
+            
+        }
+
+        #para-four{
+            vertical-align:top;
+
+        }
+
+        #first-word{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <p id="para-one"><span id="first-word">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. Unde, sequi.</p>
+    <p id="para-two">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil consequuntur! Sequi, sint mollitia adipisci dicta impedit totam at obcaecati voluptatum rerum est, asperiores eligendi et explicabo quisquam omnis ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta eius nisi inventore veniam hic, dicta assumenda dolor magni odit placeat expedita reiciendis culpa tempora quae in doloribus voluptatum temporibus eveniet ab eligendi veritatis consequatur facilis incidunt? Pariatur aliquid sed repudiandae libero necessitatibus, quia minus doloribus, adipisci molestias, provident dicta aperiam facilis? Vero culpa voluptates deserunt fugit modi laudantium? Nulla deleniti optio, natus doloremque provident accusamus molestias blanditiis quia, consequuntur officiis ab neque, enim qui quibusdam asperiores cumque! Illum dolores libero doloribus facere officiis beatae adipisci at eaque sunt ipsam, nam harum voluptates error ipsum aliquid tempore provident velit! Molestias, corporis?</p>
+    <p id="para-three">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, sequi.</p>
+
+    <p id="para-four">
+        <img src="one.jpg" height="100" width="300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia placeat unde libero dolor tempora praesentium inventore explicabo, cum voluptate modi ut harum dicta totam consequuntur nostrum cumque quos officiis laudantium cupiditate facilis fuga. Ex, reiciendis harum. Facere, dolorum vitae modi provident consequuntur harum ab itaque odit sint magni totam praesentium?
+    </p>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 1000px;
+        }
+
+        .container img{
+            height: 400px;
+            width: 350px;
+        }
+
+        .container_text{
+            /* background-color: red; */
+            height: 400px;
+            padding: 1em;
+        }
+
+        .container_text table td{
+            width: 275px;
+        }
+
+        .container_text h1, .container_text p{
+            margin: 0.3em;
+        }
+
+        .container_text p{
+            font-size: 0.9em;
+        }
+
+        .container_text ul{
+            list-style-image: url('check4.gif');
+        }
+        .container_text hr{
+            margin-bottom: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <!-- contain image -->
+                <td>
+                    <img src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/dda7af9b1ecd5552bed6748b/pexels-photo-6533886.jpeg" alt="">
+                </td>
+
+                <!-- contain-text -->
+                <td>
+                    <div class="container_text">
+                    <h1>About Us</h1>
+                    <hr>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <p>
+                        <strong>Sample text. Click to select the text box. Click again or double click to start editing the text.</strong>
+                    </p>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <ul>
+                                    <li>Sample text. Click to </li>
+                                    <li>Select the text box</li>
+                                    <li>Click again or double</li>
+                                    <li>Click to start editing the text.</li>
+                                </ul>   
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        table td,table th{
+            padding: 0.5em;
+        }
+
+        thead th{
+            border-bottom: 2px solid #999;
+        }
+
+        tfoot th{
+            border-bottom:2px solid #999;
+            border-top:2px solid #999;
+        }
+
+        tbody tr:nth-child(2n+1){
+            background-color: #eee;
+        }
+
+        tbody tr{
+            transition: all 0.2s;
+        }
+
+        tbody tr:hover{
+            background-color: chartreuse;
+        }
+
+
+        .align-left{
+            text-align: left;
+        }
+
+        .align-right{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="align-left">Product Name</th>
+                <th class="align-left">Price</th>
+                <th class="align-right">Quantity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td>60000</td>
+                <td class="align-right">2</td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>70000</td>
+                <td class="align-right">3</td>
+            </tr> 
+            <tr>
+                <td>Tax</td>
+                <td>200</td>
+                <td class="align-right"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="align-left">Total</th>
+                <th></th>
+                <th class="align-right">130200</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

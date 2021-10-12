@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        .form__container{
+            width: 400px;
+            background-color: rgba(245, 245, 8,0.3);
+        }
+
+        .form__input{
+            display: block;
+            width: 300px;
+            margin: 18px 50px;
+            font-size: 1.2em;
+            padding: 0.2em 0.5em;
+            border-radius: 0.2em;
+            border: 2px solid #aaa;
+            
+        }
+
+        .form__input::placeholder{
+            color:orange;
+        }
+
+        .text--center
+        {
+            text-align: center;
+        }
+
+        .width--100{
+            width: 100%;
+        }
+
+        .form__header,.form__button{
+            text-transform: uppercase;
+            padding: 0.8em;
+        }
+
+        .form__header{
+            background-color: orangered;
+            color: #fff;
+        }
+
+        .form__button{
+            background-color: orange;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .form__input__meassage{
+            min-height: 120px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form__container text--center">
+            <h1 class="form__header width--100">
+                Contact Us!
+            </h1>
+
+            <input type="text" class="form__input" placeholder="Name..">
+
+            <input type="email" class="form__input" placeholder="Email..">
+
+            <input type="text" class="form__input" placeholder="Subject..">
+
+            <textarea class="form__input form__input__meassage" placeholder="Message..."></textarea>
+
+            <button class="form__button width--100">send message</button>
+        </div>
+    </div>
+</body>
+</html>
