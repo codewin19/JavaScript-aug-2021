@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Images | styling using css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .card{
+            overflow: auto;
+            font-size: 1.3em;
+            text-align: center;
+            
+        }
+
+        .container div:nth-child(2n+1){
+            background-color: #1eb2a6;
+            color:#d4f8e8;
+        }
+
+        .card__right{
+            background-color: #ffa34d;
+            color:#d4f8e8;
+            text-align: center;
+        }
+        
+
+        .card__image{
+           /* float: left;*/
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+        
+
+        }
+
+        .card__image--right{
+            /*float: right;*/
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="card__image" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/1a/2b/ed/gulmarg.jpg?w=300&h=300&s=1" alt="">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illo eaque nostrum earum vero recusandae officiis dolore suscipit consectetur eveniet corporis ex totam nulla, sint perspiciatis! Laboriosam corporis enim assumenda quibusdam quis! Laudantium eum nostrum quisquam perferendis numquam nesciunt a facilis accusantium omnis dicta. Modi pariatur laudantium nulla in tenetur repellendus quos fugiat veritatis provident voluptatibus vitae, at iusto natus rem aliquam voluptas debitis esse, suscipit vel error. Vitae iusto rerum iure omnis corporis laborum, doloremque tenetur, pariatur temporibus accusamus facilis iste modi voluptatum aspernatur cumque quidem sed quas consequuntur, natus dolorem commodi quo reprehenderit. Libero ab saepe illum fuga.
+        </div>
+        <div class="card card__right">
+            <img class="card__image card__image--right" align="center"src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/39/20/78/living-on-earth-is-expensive.jpg?w=300&h=300&s=1" alt="">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab iusto fuga consequatur hic exercitationem animi blanditiis corporis rerum id aliquid optio explicabo recusandae, illum autem nam nesciunt consequuntur ex quos voluptatum nemo voluptas rem neque illo natus! Qui minima veniam eius. Neque, eaque ipsa explicabo provident hic optio id aperiam ad in ducimus animi harum aspernatur alias voluptatibus consectetur sunt libero eum, molestiae possimus sed reiciendis vero? Eaque et consequatur maiores est minima voluptate nam odio consectetur, doloremque sequi saepe ex, commodi recusandae, suscipit aperiam accusantium. Mollitia delectus optio, eos, labore incidunt earum accusantium, laboriosam officia suscipit sed a cum.
+        </div>
+    </div>
+</body>
+</html>
