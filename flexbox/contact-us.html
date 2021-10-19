@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        .page__container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form__container{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap:0.6em;
+        }
+
+        .form__container h2{
+            text-align: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid gray;
+            margin-bottom: 1em;
+        }
+
+        .form__element{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .from__label{
+            
+        }
+
+        .form__input{
+            background-color: #ddd;
+            font-size: 1.2em;
+            border: none;
+            padding:0.3em 0.5em;
+            border-radius: 0.2em;
+        }
+
+        .from__button--send{
+            background-color: #a4fbe3;
+            outline: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            font-size: 1.5em;
+            border-radius: 0.2em;
+        }
+
+        .from__button--send:hover{
+            border: 2px solid #5e87b8;
+        }
+
+        .
+    </style>
+</head>
+<body>
+    <div class="page__container">
+        <div class="form__container">
+            <h2>Contact Us</h2>
+            <div class="form__element">
+                <label for="username" class="from__label">Username : </label>
+                <input type="text" class="form__input">
+            </div>
+            <div class="form__element">
+                <label for="email" class="from__label">User Email : </label>
+                <input type="text" class="form__input">
+            </div>
+            <div class="form__element">
+                <label for="message" class="from__label">Messge : </label>
+                <textarea class="form__input"></textarea>
+            </div>
+            <div class="form__element">
+                <button type="submit" class="from__button--send">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
